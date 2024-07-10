@@ -10,8 +10,8 @@ Analyzing the impact of an online marketing campaign on user engagement metrics,
 
 Simulating data on user interactions before and after the marketing campaign.
 
-| Variables | Description | 
-|-----------|-------------|
+| Variables | Description | Datatype |
+|-----------|-------------|----------|
 
 |User ID   | A unique identifier for each user in the dataset. | Integer |
 |Exposed | Indicates whether a user was exposed to the marketing campaign. 1 means the user was exposed, and 0 means the user was not exposed.| Integer 0/1 | 
