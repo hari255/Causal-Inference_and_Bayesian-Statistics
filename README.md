@@ -6,10 +6,9 @@
 Analyzing the impact of an online marketing campaign on user engagement metrics, such as `click-through` rate (CTR) or `conversion` rate. The goal is to quantify the causal effect of the campaign and estimate the impact using Bayesian statistics and Causal Inference.
 
 
-### Data Collection
+### Data 
 -----------
 
-Simulating data on user interactions before and after the marketing campaign.
 
 | Variables | Description | Data type | 
 |-----------|-------------|-----------|
