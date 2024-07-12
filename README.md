@@ -3,10 +3,30 @@
 
 ## Project Overview
 
-Analyzing the impact of an online marketing campaign on user engagement metrics, such as `click-through` rate (CTR) or `conversion` rate. The goal is to quantify the causal effect of the campaign and estimate the impact using Bayesian statistics and Causal Inference.
+**Analyzing the impact of an online marketing campaign on user engagement metrics, such as `click-through` rate (CTR) or `conversion` rate. The goal is to quantify the causal effect of the campaign and estimate the impact using Bayesian statistics and Causal Inference.**
+
+## Key components
+
+### 1. Data generation
+---
+### 2. Data Preprocessing
+---
+### 3. Exploratory Data Analysis
+---
+### 4. Causal Inference with Propensity Score Matching (PSM)
+---
+### 5. Difference-in-Differences (DiD) Analysis
+---
+### 6. Bayesina Causal Inference
+---
+### 7. Interpretation and Visualization
+---
+### 8. Reporting
+---
 
 
-### Data 
+
+## Dataset
 -----------
 
 
@@ -22,10 +42,10 @@ Analyzing the impact of an online marketing campaign on user engagement metrics,
 | Conversions Difference|  The difference in the number of conversions before and after the campaign exposure (conversions_after - conversions_before). This variable is used to measure the change in user behavior due to the campaign. | Int |
 | Propensity Score | The probability of a user being exposed to the campaign based on their characteristics (e.g., clicks_before and conversions_before). This score is used in propensity score matching to create comparable treatment and control groups. | Float | 
 
+----
 
-## Concepts and Methods
 
-### Propensity Score
+## Propensity Score
 
 **Propensity Score** is the probability of a unit (e.g., a user) being assigned to the treatment group given a set of observed covariates. It helps to balance the treatment and control groups on these covariates, making the groups comparable for causal inference.
 
@@ -39,7 +59,7 @@ where:
 - \(T\) is the treatment indicator (1 if treated, 0 if control).
 - \(X\) is the vector of observed covariates.
 
-### Logistic Regression
+## Logistic Regression
 
 Logistic regression is used to estimate the propensity scores. The model predicts the probability of a user being exposed to the campaign based on their pre-treatment characteristics.
 
@@ -53,17 +73,10 @@ where:
 - \(\alpha\) is the intercept.
 - \(\beta_1, \beta_2, \ldots, \beta_n\) are the coefficients for the covariates \(X_1, X_2, \ldots, X_n\).
 
-### Nearest Neighbors Matching
+## Nearest Neighbors Matching
 
 Nearest Neighbors Matching is used to match each treated user with a control user who has a similar propensity score. This helps to create a balanced dataset where the treatment and control groups are comparable.
 
-### Difference-in-Differences (DiD)
+## Difference-in-Differences (DiD)
 
 The Difference-in-Differences method estimates the treatment effect by comparing the changes in outcomes over time between the treatment and control groups. This method helps to account for time-invariant unobserved confounders.
-
-## Steps
-
-1. **Data Simulation**: Simulate user data with engagement metrics and campaign exposure.
-2. **Propensity Score Calculation**: Use logistic regression to calculate propensity scores based on pre-treatment variables.
-3. **Matching**: Use Nearest Neighbors Matching to match treated users with control users based on propensity scores.
-4. **Visualization**: Create scatter plots to visualize the distribution of propensity scores before and after matching.
